@@ -6,9 +6,13 @@ def main():
     while True:
         code = input('Enter country code or press enter to quit ')
         # TODO check code is 2 letters 
-        # TODO end the loop if user presses enter
-        found, name, error = country_api.get_country_name(code)
         
+        if code == '':
+            print('Bye!')
+            break
+
+        found, name, error = country_api.get_country_name(code)
+
         if found:
             print(f'{code} is the country code for {name}')
         elif not found and not error:
