@@ -5,7 +5,7 @@ import country_api
 def main():
     while True:
 
-        code = input('Enter 2-letter country code or press enter to quit ')
+        code = input('Enter the 2-letter country code or press enter to quit ')
 
         if code == '':
             print('Bye!')
